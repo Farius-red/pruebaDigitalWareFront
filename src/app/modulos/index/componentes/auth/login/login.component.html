@@ -1,0 +1,47 @@
+ <div class="container text-center" *ngIf="isLogged; else logFail">
+    <h1>Ya estas logeado </h1>
+    
+</div>
+
+<ng-template #logFail> 
+
+
+
+
+
+<div class="container d-flex justify-content-center m-4 ml-0 mr-0" >
+   
+        <div class="card">
+
+            <div class="card-body" style="background: var(--color-zigma); border-radius: 2%;">
+            
+           
+              <form  [formGroup]="loginForm" (submit)="onLogin()">
+                  
+                  <div class="mb-sm-6">
+                    <label for="nombreUsuario" class="form-label"> Nombre Usuario</label>
+                    <input type="text" formControlName="nombreUsuario"  class="form-control" placeholder="Escriba su nombre de  Usuario" >
+                    
+                  </div>
+
+                  <div class="mb-sm-6 mt-4">
+                    <label for="password" class="form-label"> password</label>
+                    <input type="password" formControlName="password" class="form-control" >
+                    
+                  </div>
+                       
+                  <button type="submit" class="btn btn-primary mt-4"  [disabled]="loginForm.invalid">Iniciar sesion </button>
+              </form>
+            
+
+            <div class="col col-md-6">
+                
+            </div>
+            
+            </div>
+        </div>
+        
+    
+</div>
+
+</ng-template>

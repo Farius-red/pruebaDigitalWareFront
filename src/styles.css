@@ -1,0 +1,84 @@
+:root {
+  /* cabecera*/
+  /* colores zigma */
+  --color-zigma: #ffe009;
+  --color-textosZigma: #ef6c00;
+
+  /* dakboard workingDog*/
+  --width: 300px;
+  --padding: 10px;
+  --bgcolor: repeating-linear-gradient(
+    90deg,
+    rgb(0, 238, 255),
+    rgb(0, 38, 255)
+  );
+  --hovercolor: rgb(4, 44, 177);
+  --width--collapsed: 50px;
+}
+
+.Spam {
+  color: var(--color-textosZigma);
+}
+.primer {
+  background-color: var(--color-zigma);
+}
+#cabecera {
+  height: 60px;
+  -webkit-box-shadow: 14px 10px 23px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 14px 10px 23px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 14px 10px 23px 0px rgba(0, 0, 0, 0.75);
+  background: #fff;
+  text-align: center;
+}
+
+#cabecera a i {
+  margin: 22px 15px;
+  color: #000;
+}
+
+#cabecera a i:hover {
+  color: #0275d8;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.featurette-divider {
+  margin: 5rem 0;
+  background: #0f0bd4;
+}
+
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -0.05rem;
+}
+
+.botonverde {
+  background-color: #1ab394;
+  color: #fff;
+}
+
+.botonverde:hover {
+  background: #00897b;
+  transition: 1s;
+}
+
+.botonNaranja {
+  background-color: #ef6c00;
+  color: #fff;
+}
+
+.botonNaranja:hover {
+  background: #ffea00;
+  color: #000;
+  transition: 1s;
+}
+
+html,
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

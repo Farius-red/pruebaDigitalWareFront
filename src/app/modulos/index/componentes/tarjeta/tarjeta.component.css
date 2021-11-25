@@ -1,0 +1,21 @@
+.b1 {
+  margin-top: 5%;
+  text-align: center;
+  padding: 5px;
+  border-radius: 15px 50px;
+  background: linear-gradient(
+    45deg,
+    yellow 20%,
+    orange 30%,
+    yellow 30%,
+    orange 10%
+  );
+  height: 150px;
+  width: 400px;
+}
+
+.b1:hover {
+  cursor: pointer;
+  border: 2px solid var(--color-textosZigma);
+  background: linear-gradient(45deg, yellow, orange, yellow, orange);
+}

@@ -15,6 +15,7 @@ import { AdminModule } from './modulos/admin/admin.module';
 import { HttpClientModule } from '@angular/common/http';
 
 import { ToastrModule } from 'ngx-toastr'
+import { interceptorProvider } from './core/servicios/product-interceptors.service';
 
 
 @NgModule({
@@ -34,7 +35,7 @@ import { ToastrModule } from 'ngx-toastr'
     ToastrModule.forRoot(),
   ],
 
-  providers: [CoreModule,],
+  providers: [CoreModule, interceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

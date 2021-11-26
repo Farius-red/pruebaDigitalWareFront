@@ -1,1 +1,37 @@
-<p>registro-usuarios works!</p>
+<div class="container d-flex justify-content-center m-4 ml-0 mr-0">
+
+    <div class="card">
+        <div class="card-header">
+            <h1 class="text-center card-title"> Registro</h1>
+        </div>
+        <div class="card-body">
+             <form [formGroup]="nuevoUsuarioFrom" (submit)="registroUsuario()"> 
+                 <div class="mb-3">
+                   <label for="" class="form-label">Nombre Usuario</label>
+                   <input type="text" formControlName="nombreUsuario"  class="form-control" placeholder="Escribir Nombre Usuario" >
+                 </div>
+
+                 <div class="mb-3">
+                    <label for="" class="form-label">Nombre </label>
+                    <input type="text"  formControlName="nombre" class="form-control" placeholder="Escribir Nombre Usuario" >
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="" class="form-label">Email</label>
+                    <input type="email"  formControlName="email" class="form-control" placeholder="ejemplo@gmai.com" >
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" formControlName="password" class="form-control" placeholder="digite una  clave ">
+                  </div>
+                <div class="mb3">
+
+                    <button type="submit"  class="btn btn-primary justify-content-center" [disabled]="nuevoUsuarioFrom.invalid">Registrar</button>
+                </div>
+             </form>
+        </div>
+
+        
+    </div>
+</div>

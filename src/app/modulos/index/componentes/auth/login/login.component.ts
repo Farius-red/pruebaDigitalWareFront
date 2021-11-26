@@ -35,15 +35,18 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
 
     this.loginForm = this.authService.loginForm;
+    
     if (this.tokenService.getToken()) {
       this.isLogged = true;
       this.isLoginFail = false;
-      this.roles = this.tokenService.getAturhorities();
+      this.roles = this.tokenService.getAuthorities();
     }
   }
 
   onLogin(): void {
-
+debugger;
+  this.nombreUsuario = this.loginForm.value.nombreUsuario;
+  this.password = this.loginForm.value.password;
     this.loginUsuario = new LoginUsuario(this.nombreUsuario, this.password);
     this.authService.login(this.loginUsuario).subscribe(
       data => {
@@ -54,9 +57,16 @@ export class LoginComponent implements OnInit {
         this.tokenService.setUserName(data.nombreUsuario);
         this.tokenService.setAuthorities(data.authorities);
         this.roles = data.authorities;
+        // if(this.roles.indexOf('ROL_USER') != -1)
+        //   this.router.navigate(['/tienda']);
+     console.log(this.roles)
+
+        // if(this.roles.indexOf('ROL_ADMIN') != -1) 
+         this.router.navigate(['/admin']);
+        
 
         this.toastr.success('Bienvenido' ,'OK', {
-          timeOut: 3000, positionClass: 'toast-top-center',
+          timeOut: 5000, positionClass: 'toast-top-center',
         });
 
       },

@@ -25,7 +25,7 @@ export class AuthService {
   }
 
   public login(loginUsuario: LoginUsuario): Observable<JwtDTO>{
-    return this.httpClient.post<any>(this.authUrl + 'login', loginUsuario);
+    return this.httpClient.post<JwtDTO>(this.authUrl + 'login', loginUsuario);
   }
   
 
@@ -34,6 +34,14 @@ export class AuthService {
     nombreUsuario: ['', Validators.required],
    password:['', Validators.required]
   });
+
+  nuevoUsuarioFrom = this.fb.group({
+    nombre: ['', Validators.required],
+    nombreUsuario: ['', Validators.required],
+    password:['', Validators.required],
+    email: ['',  [Validators.required, Validators.email]],
+
+  })
 
 
 

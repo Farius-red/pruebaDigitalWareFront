@@ -31,8 +31,6 @@ export class ProductosComponent implements OnInit {
 
   getAllProducts() {
 
-    this.productosSinfireb = this.productoService.trasformAenteros(this.productoService.getProductos());
-
     this.productoService.getProductosBD()
       .subscribe(res => this.productos = this.productoService.trasformAenteros(res));
   }
